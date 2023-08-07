@@ -1,11 +1,7 @@
-<div align="center">
- 
 # Deep coded exposure
 
 [This repository](https://github.com/zhihongz/DCE) contains the PyTorch code for [our paper](https://doi.org/10.1364/PRJ.489989) "Deep coded exposure: end-to-end co-optimization of flutter shutter and deblurring processing for general motion blur removal" by [Zhihong Zhang](https://zhihongz.github.io/), Kaiming Dong, Jinli Suo, and Qionghai Dai.
 
-
-</div>
  
 ## Introduction
 We proposed an end-to-end framework to handle general motion blurs with a unified deep neural network, and optimize the shutter’s encoding pattern together with the deblurring processing to achieve high-quality sharp images. The framework incorporates a learnable flutter shutter sequence to capture coded exposure snapshots and a learning-based deblurring network to restore the sharp images from the blurry inputs. By co-optimizing the encoding and the deblurring modules jointly, our approach avoids exhaustively searching for encoding sequences and achieves an optimal overall deblurring performance.
@@ -36,7 +32,7 @@ scikit-image
 3. Your can change the configuration files in `conf/` for further testing or training.
 
 
-### Citation   
+## Citation   
 ```
 @article{zhang2023DeepCoded,
   title = {Deep coded exposure: end-to-end co-optimization of flutter shutter and deblurring processing for general motion blur removal},
