@@ -1,0 +1,18 @@
+conda:
+    torch>=1.1
+    torchvision
+    scikit-image
+    matplotlib
+    tensorboard>=1.14
+    pandas
+
+pip:
+    hydra-core>=1.0.3
+    hydra_colorlog
+    tqdmp
+    ptflops
+    opencv-python
+    pytorch-msssim
+    kornia
+    einops
+    pytorch-gradual-warmup-lr

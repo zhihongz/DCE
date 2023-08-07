@@ -1,0 +1,15 @@
+# @package test_data_loader
+_target_: srcs.data_loader._my_video_data_loaders.get_data_loaders
+## BBNCT
+# data_dir: ${hydra:runtime.cwd}/dataset/demo/ # simu data
+data_dir: ${hydra:runtime.cwd}/dataset/demo/real/ # real data
+frame_num: ${frame_n}
+batch_size: 1
+patch_size: ~
+tform_op:
+status: 'real_test' # real_test | test
+shuffle: False
+num_workers: ${num_workers}
+pin_memory: True
+prefetch_factor: 2
+all2CPU: False

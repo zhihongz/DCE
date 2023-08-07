@@ -1,0 +1,32 @@
+# @package _global_
+network_name: optce_deblur
+arch:
+  _target_: srcs.model.optce_deblur_model.OptceDeblurNet
+  sigma_range: ${sigma_range}
+  test_sigma_range: ${test_sigma_range}
+  ce_code_n: 32
+  frame_n: ${frame_n}
+  ce_code_init: [1,1,1,1,0,0,0,1,1,1,0,0,1,1,0,1,0,1,0,0,0,1,0,0,1,0,0,0,1,1,0,1] # [raskar2006CodedExposure] len32
+  opt_cecode: True
+  blur_net: CEBlurNet
+  binary_fc: STEBinary_fc
+  deblur_net: DeepRFT
+  inference: ${inference}
+  
+loss:
+  _target_: srcs.loss._pix_loss_cls.WeightedLoss
+  loss_conf_dict: {'CharbonnierLoss':1.0, 'EdgeLoss':0.05, 'fftLoss':0.01}
+optimizer:
+  _target_: torch.optim.Adam
+  lr: 2e-4
+  weight_decay: 0
+  amsgrad: true
+lr_scheduler:
+  _target_: srcs.scheduler._base_scheduler.getGradualWarmupScheduler
+  multiplier: 1
+  warmup_epochs: 2
+  after_scheduler_conf:
+    type: torch.optim.lr_scheduler.CosineAnnealingLR
+    args:
+      T_max: ${trainer.epochs}
+      eta_min: 1e-6

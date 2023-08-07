@@ -1,0 +1,14 @@
+# @package data_loader
+_target_: srcs.data_loader._my_video_data_loaders.get_data_loaders
+## BBNCT
+data_dir: /ssd/0/zzh/dataset/GoPro/GOPRO_Large_all/train/  # video
+frame_num: ${frame_n}
+batch_size: 8 # ${batch_size}
+patch_size: 256 # ${patch_size}
+tform_op: 'all' # 'flip' | 'rotate' | 'reverse'
+status: 'train'
+shuffle: true
+num_workers: ${num_workers}
+pin_memory: False
+prefetch_factor: 2
+all2CPU: True
