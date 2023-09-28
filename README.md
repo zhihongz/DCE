@@ -41,7 +41,8 @@ scikit-image
   year = {2023},
   journal = {Photon. Res.},
   volume = {11},
-  number = {9},
+  number = {10},
+  pages = {1678}
   doi={10.1364/PRJ.489989}
 }
 ```
