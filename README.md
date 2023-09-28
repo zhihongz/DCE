@@ -1,6 +1,10 @@
 # Deep coded exposure
 
-[This repository](https://github.com/zhihongz/DCE) contains the PyTorch code for [our paper](https://doi.org/10.1364/PRJ.489989) "Deep coded exposure: end-to-end co-optimization of flutter shutter and deblurring processing for general motion blur removal" by [Zhihong Zhang](https://zhihongz.github.io/), Kaiming Dong, Jinli Suo, and Qionghai Dai.
+[This repository](https://github.com/zhihongz/DCE) contains the PyTorch code for [our paper](https://doi.org/10.1364/PRJ.489989
+        
+        
+        
+        ) "Deep coded exposure: end-to-end co-optimization of flutter shutter and deblurring processing for general motion blur removal" by [Zhihong Zhang](https://zhihongz.github.io/), Kaiming Dong, Jinli Suo, and Qionghai Dai.
 
  
 ## Introduction
@@ -42,7 +46,7 @@ scikit-image
   journal = {Photon. Res.},
   volume = {11},
   number = {10},
-  pages = {1678}
+  pages = {1678},
   doi={10.1364/PRJ.489989}
 }
 ```
